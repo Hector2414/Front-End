@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #quadrado{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            shape-outside: inset(20px 5px 30px 10px); /*10 px na parte superior
+                                                        5px à direita
+                                                        30px na parte inferior
+                                                        10px à esquerda
+                                                        */
+           
+        }
+
+        .circulo{
+            float: left;
+            width: 300px;
+            height: 300px;
+             border-radius: 50%;
+            shape-outside: circle();
+            clip-path: circle();
+            background-color: green;
+        }
+                                               
+
+       
+      
+
+        #ellipse{
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            shape-outside: ellipse(20% 50%);
+            clip-path: ellipse(20% 50%);
+            background-color: blue;
+        }
+    </style>
+    <title>Formas em Texto</title>
+</head>
+<body>
+    <h1>Shape-outside</h1>
+    <p>Essa propriedade permite que voc~e desenhe uma forma 
+        para que o texto se envolva e flua ao seu redor</p>
+    <p>junto a essas propriedades temos formas básicas </p>
+    <p>O elemento que vamos aplicar a forma com propriedade <strong>Shape-outside</strong></p><strong>Float</strong>
+    <ul>
+        <li>inset()</li>
+        <li>circle()</li>
+        <li>ellipse()</li>
+        <li>polygon()</li>
+    </ul>
+    <h2>inset()</h2>
+    <p>POde ser usado para criar um retangulo ou quadrado com um deslocamento opcional
+        para o texto que o envolver
+    </p>
+    <div id="quadrado"></div>
+    Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. 
+    Atirei o pau no gatis, per gatis num morreus. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Si num tem leite então bota uma pinga aí cumpadi!
+    Diuretics paradis num copo é motivis de denguis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Mais vale um bebadis conhecidiss, 
+    que um alcoolatra anonimis. Casamentiss faiz malandris se pirulitá.
+    A ordem dos tratores não altera o pão duris. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. 
+    Sed non consequat odio. Per aumento de cachacis, eu reclamis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
+    Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. 
+    Paisis, filhis, espiritis santis. Cevadis im ampola pa arma uma pindureta.
+
+    <h2>Circle ()</h2>
+    <p>o circulo é criado usando a propriedade <strong>shape-outside</strong></p>
+    <p>Poder se aplicado <strong>clip-path</strong>com a propriedade
+    correspondente para que o circulo apareça <strong>clip-path</strong>pode receber a mesma propriedade
+<strong>shape-outside</strong> para dar a ela forma padrão de 
+<strong>circle ()</strong></p>
+
+<div class="circulo"></div>
+Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, 
+mas ninguém vê os tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
+Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Nec orci ornare consequat.
+ Praesent lacinia ultrices consectetur. Sed non ipsum felis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+ Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+  Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
+ Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Nec orci ornare consequat.
+  Praesent lacinia ultrices consectetur. Sed non ipsum felis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+
+  <hr>
+  <h2>Ellipse</h2>
+  <p>Funcionam da mesma forma que os círcuos, exceto pelo fato de criar uma ovall</p>
+  <p>Pode definir os valores x e y assim <strong>ellipse(25px 50px)</strong></p>
+  <div id="ellipse"></div>
+  Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus.
+   Copo furadis é disculpa de bebadis, arcu quam euismod magna. Si num tem leite então bota uma pinga aí cumpadi!
+  Diuretics paradis num copo é motivis de denguis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Mais vale um bebadis conhecidiss,
+   que um alcoolatra anonimis. Casamentiss faiz malandris se pirulitá.
+  A ordem dos tratores não altera o pão duris. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Per aumento de cachacis, 
+  eu reclamis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
+  Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! 
+  Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
+  Mé faiz elementum girarzis, nisi eros vermeio. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Nec orci ornare consequat. 
+  Praesent lacinia ultrices consectetur. Sed non ipsum felis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+
+ 
+
+</body>
+</html>

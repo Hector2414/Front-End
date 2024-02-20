@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            box-sizing: border-box;
+            display: flex; /*usa flexbox para centralizar conteúdos*/
+            justify-content: center; /*centralizar horizontalmente*/
+            align-items: center;/*centralizar verticalmente*/
+            min-height: 100vh; /*altura mínima da página é 100%vh*/
+            background-color: tomato;
+
+
+        }
+
+        .carro{
+            position: relative;
+            animation: mover-carro 5s infinite;
+
+        }
+        .corpo{
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 20px;
+        }
+        .roda{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+            
+        }
+        #roda1{
+            left: 20px;
+        }
+        #roda2{
+            right: 20px;
+        }
+
+        @keyframes mover-carro { /*inicia a definição de uma animação chamada mover-carro*/
+            0%{ /*início da animação*/
+                transform: translateX(0);/*inicia a movimentaçao*/
+            }
+            100%{
+                transform: translateX(50vh);/*move carro para direita*/
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="carro">
+        <div class="corpo"></div>
+        <div class="roda" id="roda1"></div>
+        <div class="roda" id="roda2"></div>
+    </div>
+</body>
+</html>
