@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex; 
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+
+           background-color: aqua;
+        }
+        p{
+            color: blue;
+            font-size: 80px;
+            animation: texto 2s infinite ;
+        }
+        @keyframes texto {
+            0%{opacity: 1;}
+            50%{
+                opacity: 0;
+            }
+            100%{opacity: 1;}
+        }
+    </style>
+    <title>Texto piscando</title>
+</head>
+<body>
+    <div class="textoPiscando">
+        <p>Texto pixcando</p>
+    </div>
+</body>
+</html>

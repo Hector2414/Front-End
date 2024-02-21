@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex; 
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+        }
+        .circulo{
+          width: 200px;
+          height: 200px;
+          background-color: blue;
+          border-radius: 50%;
+          animation: pulse .3s infinite;
+        
+         
+       
+
+        }
+
+        @keyframes pulse {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+            transform: scale(1.2);
+            }
+            100%{
+              transform: scale(1);
+            }
+        }
+    </style>
+    <title>Circulo pulsante</title>
+</head>
+<body>
+   <!--<p>Criar um círculo que pulse continuamente</p>--> 
+    <div class="circulo"></div>
+
+    
+</body>
+</html>
