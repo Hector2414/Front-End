@@ -18,6 +18,7 @@ body{
     background-color: white;
     border-radius: 20px;
     padding: 20px;
+   
 }
 h1{
     color:rgb(17, 86, 102);
@@ -42,4 +43,7 @@ form button{
     color:white;
     font-size: 18px;
     height: 50px;
+}
+.resultados{
+    background-color: blue;
 }
