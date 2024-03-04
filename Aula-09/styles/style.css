@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: 82vh 13vh 5vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center; /*centraliza na horizontal*/
+    align-items: center;/*centraliza na verrtical*/
+    background-color: aliceblue;
+    gap: 10px;
+}
