@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active - Element()</title>
+</head>
+<body onclick="minhaFuncao()">
+    
+    <h1>O elemento Active</h1>
+<h2>a prioridade do elemento ativo </h2>
+<input type="text" value="um campo de texto">
+<button>um botão</button>
+<p>clique e qualquer lugar do documento para ativar o elemento</p>
+<p id="demo"></p>
+<script>
+    function minhaFuncao(){
+        const elemento = document.activeElement.tagName;
+        document.getElementById("demo").innerHTML = elemento;
+        
+        
+    }
+
+</script>
+</body>
+</html>
