@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Modificar o conteúdo de um elemento</h1>
+
+    <div id="meuElemento">Coteúdo Inicial</div>
+    <button onclick="modificar()">Mudar</button>
+    <hr>
+
+    <div id="meuElemento2">Coteúdo Inicial</div>
+    <button onclick="colorir()">Mudar</button>
+    <hr>
+    <input type="text" id="texto">
+</body>
+<script>
+    function pega(){
+        var elemento = document.getElementById("texto");
+        var valor = input.value 
+    }
+    function modificar(){
+        var elemento = document.getElementById("meuElemento");
+        elemento.innerHTML = "Hector"
+       //console.log(elemento)
+    }
+
+    function colorir(){
+        var cor = document.getElementById("meuElemento2");
+        cor.style.color = "blue";
+    }
+</script>
+</html>
