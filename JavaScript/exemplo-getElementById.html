@@ -11,16 +11,54 @@
     <div id="meuElemento">Coteúdo Inicial</div>
     <button onclick="modificar()">Mudar</button>
     <hr>
-
+<h1>Colorir</h1>
     <div id="meuElemento2">Coteúdo Inicial</div>
     <button onclick="colorir()">Mudar</button>
     <hr>
+    <h1>Pegar conteúdo</h1>
     <input type="text" id="texto">
+    <button id="button" onclick="pega()"> Pegar conteudo</button>
+    <hr>
+    <p id="conteudo">  unde quae minus animpsum culpa velit fuga?</p>
+    <hr>
+    <h1>Esconder elemento</h1>
+    <div  id="esconder">elemento</div>
+    <button onclick="esconderElemento()">esconder</button>
+    <button onclick="aparecerElemento()">aparecer</button>
+    <hr>
+    <div id="outraimagem">
+        <img src="./IMG/phoca_thumb_l_image03_grd.png" alt="" id="imagem">
+    </div>
+    
+    <button id="excluir" onclick="desaparecerImagem()">excluir </button>
+    <button id="aparecer" onclick="aparecerElemento()">aparecer</button>
+
 </body>
 <script>
+    function desaparecerImagem(){
+        var elemento = document.getElementById("imagem")
+       elemento.parentNode.removeChild(elemento)
+    }
+    function aparecerImagem(){
+        var elemento = document.getElementById("imagem")
+        const newImg = document.createElement("outraimagem");
+        newImg.parentNode.appendChild()
+        
+    }
+    function esconderElemento(){
+        var elemento = document.getElementById("esconder")
+        elemento.style.display = "none"
+    }
+    function aparecerElemento(){
+        var elemento = document.getElementById("esconder")
+        elemento.style.display = ""
+    }
     function pega(){
         var elemento = document.getElementById("texto");
-        var valor = input.value 
+        var conteudo  = document.getElementById("conteudo");
+        var valor = elemento.value;
+        
+        conteudo.innerHTML = valor;
     }
     function modificar(){
         var elemento = document.getElementById("meuElemento");
@@ -31,6 +69,8 @@
     function colorir(){
         var cor = document.getElementById("meuElemento2");
         cor.style.color = "blue";
+        cor.style.fontFamily="bold";
+      
     }
 </script>
 </html>
