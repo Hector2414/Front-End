@@ -1,24 +1,42 @@
-const url = 'https://rickandmortyapi.com/api/character';
 const imagem = document.querySelector(".imagem");
+const container = document.querySelector(".container");
+const situacao = document.querySelector(".status");
+const especie = document.querySelector(".especie");
+const origem = document.querySelector(".origem");
 
-function rickMorty (){
-    fetch( url,{
-        method: 'GET',
-    }).then((resposta) => resposta.json())
-    .then((dados) => {
-        console.log(dados)
+const url = 'https://rickandmortyapi.com/api/character';
+
+function RickAndMorty(){
+    fetch(url,{
+        method:'GET',
     })
-
+    .then((reposta) => reposta.json())
+    .then((dados)=>{
+       imprimirDados(dados)
+       console.log(dados)
+    })
+    .catch(erro => alert(erro))
 }
 
-
-rickMorty();
-
-function imprimirDados (dados){
+function imprimirDados(dados){
     dados.results.forEach(element => {
-       imagem.innerHTML = `"<img src = https://rickandmortyapi.com/api/character/avatar${element.id}.jpeg>"` 
-    });
+        let p = document.createElement('p');
+        p.setAttribute('id', element.id);
+        p.innerHTML = element.name;
+        container.appendChild(p)
+        
 
+        p.addEventListener('click', () =>{
+             imagem.innerHTML = `<img src="https://rickandmortyapi.com/api/character/avatar/${element.id}.jpeg">`
+             situacao.innerHTML = `A situação do personagem é: ${element.status}`,
+             origem.innerHTML = `A origem do personagem é :${element.origin.name}`,
+             especie.innerHTML = `a especie do personagem é : ${element.species}`
+        } )
+
+           
+    });
+    
 }
 
-imprimirDados();
+RickAndMorty()
+
